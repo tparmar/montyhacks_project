@@ -13,8 +13,8 @@ import pandas as pd
 #run this in your terminal before starting the flask application:
 #export set FLASK_APP=application
 #This will set the flask application
-
-
+con = sqlite3.connect("hospital.db", check_same_thread = False)
+cursor = con.cursor()
 
 #configure application
 app = Flask(__name__)
@@ -24,8 +24,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-#     with sql_connect = sqlite3.connect("hospital.db")
-# cursor = sql_connect.cursor()
-#     cursor.execute()
+    with sqlite3.connect("hospital.db") as con:
+        cursor = con.cursor()
     return render_template("index.html")
 
