@@ -10,9 +10,11 @@ import mysql.connector
 from mysql.connector import Error
 import pandas as pd
 
-#configure database
-sql_connect = sqlite3.connect("hospital.db")
-cursor = sql_connect.cursor()
+#run this in your terminal before starting the flask application:
+#export set FLASK_APP=application
+#This will set the flask application
+
+
 
 #configure application
 app = Flask(__name__)
@@ -22,5 +24,8 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+#     with sql_connect = sqlite3.connect("hospital.db")
+# cursor = sql_connect.cursor()
+#     cursor.execute()
     return render_template("index.html")
 
