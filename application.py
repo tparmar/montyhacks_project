@@ -58,33 +58,33 @@ def login():
 
 @app.route("/register", methods = ["GET", "POST"])
 def register():
-    session.clear()
-    if request.method == "POST":
-        
-        if not request.form.get("username"):
-            return apology("Missing username!", 400)
+    # session.clear()
+    # if request.method == "POST":
+
+    #     if not request.form.get("username"):
+    #         return apology("Missing username!", 400)
 
 
-        elif not request.form.get("password"):
-            return apology("Missing password!", 400)
+    #     elif not request.form.get("password"):
+    #         return apology("Missing password!", 400)
 
 
-        elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("Passwords don't match!", 400)
+    #     elif request.form.get("password") != request.form.get("confirmation"):
+    #         return apology("Passwords don't match!", 400)
 
-        else:
+    #     else:
 
-            if len(cursor.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
+    #         if len(cursor.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
 
-                hash_pwd = generate_password_hash(request.form.get("password"))
+    #             hash_pwd = generate_password_hash(request.form.get("password"))
 
-                user_id = cursor.execute("INSERT INTO users (username, hash) VALUES(:username, :hash)",
-                                 username=request.form.get("username"), hash=hash_pwd)
-                session["user_id"] = user_id
+    #             user_id = cursor.execute("INSERT INTO users (username, hash) VALUES(:username, :hash)",
+    #                              username=request.form.get("username"), hash=hash_pwd)
+    #             session["user_id"] = user_id
 
-                flash("Registered successfully!")
-                return redirect("/")
-            else:
-                return apology("Please choose another username!", 400)
+    #             flash("Registered successfully!")
+    #             return redirect("/")
+    #         else:
+    #             return apology("Please choose another username!", 400)
 
     return render_template("register.html")
