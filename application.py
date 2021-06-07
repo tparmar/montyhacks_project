@@ -57,7 +57,7 @@ def index():
 def locations():
     return render_template("locations.html")
 
-@app.route("/record", methods = ["GET", "POST"])
+@app.route("/records", methods = ["GET", "POST"])
 def records():
     return render_template("records.html")
 
