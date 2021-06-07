@@ -59,3 +59,18 @@ def login():
 @app.route("/register", methods = ["GET", "POST"])
 def register():
     return render_template("register.html")
+
+#make user input part of sql table
+s_id = input('User ID: ')
+s_name = input('Name:')
+s_birth = input('Birthdate:')
+cursor.execute("""
+INSERT INTO database_code(id, name, birth)
+VALUES (?,?,?,?)
+""", (s_id, s_name,s_birth))
+con.commit ()
+print ( 'Data entered successfully.' )
+con.close ()
+if (con):
+  con.close()
+  print("\nThe SQLite connection is closed.")
