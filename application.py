@@ -20,7 +20,7 @@ from helpers import apology, login_required, usd
 # $env:FLASK_APP = "application"
 # $env:FLASK_ENV = "development"
 # flask run
-
+# test
 #This will set the flask application
 con = sqlite3.connect("hospital.db", check_same_thread = False)
 cursor = con.cursor()
