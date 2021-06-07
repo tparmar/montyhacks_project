@@ -203,8 +203,9 @@ button:hover{
     background-repeat: no-repeat;  
 }
 .registerbox{
-    width: 335px;
-    height: 500px;
+    margin-top: 70px;
+    width: 330px;
+    height: 700px;
     background: white;
     color: black;
     top: 50%;
@@ -258,7 +259,7 @@ button:hover{
 .register-submit span{
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 56px;
+    margin-bottom: 7px;
     background: #ffaaaa;
     height: 40px;
     width: absolute;
@@ -275,6 +276,24 @@ button:hover{
 .register-submit:hover{
     border:none;
 }
-.register-submit{
-
+.register-submit input[type="date"] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.dropdowntype{
+    width: 290px;
+    margin-left: 15px;
+    position: center;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
 }

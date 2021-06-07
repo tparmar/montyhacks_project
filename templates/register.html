@@ -13,7 +13,6 @@
     <div class="registerbox">
         <br>
         <h1 class= "h1register">Account Registration</h1>
-        <br>
         <form>
             <p>Username:</p>
             <input type="text" name="" placeholder="Username" id = "username">
@@ -23,16 +22,17 @@
             <input type="text" name="" placeholder="Confirm Password"/>
             <p>Name: First Last</p>
             <input type="text" name="" placeholder="First Last"/>
-            <label for="start">DOB</label>
-
-            <input type="date" id="DOB" name="Date-of-Birth"
-                   value="2021-06-12"
-                   min="1900-01-01" max="2021-06-12">
-            <select>
-                <option disabled selected value="">Type</option>
+            <p>Account-Type</p>
+            <select class="dropdowntype">
+                <option disabled selected value="">Select-here</option>
                 <option>Admin</option>
                 <option>Patient</option>
             </select>
+            <br></br>
+            <p>Date-of-Birth</p>
+            <input type="date" id="DOB" name="Date-of-Birth"
+                   value="2021-06-12"
+                   min="1900-01-01" max="2021-06-12">
             <div class="register-submit">
                 <input type="submit" name="" value="Register"/>
                 <span></span> 
