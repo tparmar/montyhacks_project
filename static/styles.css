@@ -113,9 +113,12 @@ button:hover{
 }
 /* Login */
 .bannerLogin{
-    background: black;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; 
+    background-repeat: no-repeat;  
 }
 .loginbox{
     width: 320px;
@@ -127,6 +130,7 @@ button:hover{
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
+    border: 2px #ffaaaa solid;
 }
 .h1login{
     margin: 0;
@@ -172,9 +176,9 @@ button:hover{
 .login-submit span{
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 120px;
+    margin-bottom: 118px;
     background: #ffaaaa;
-    height: 40px;
+    height: 38px;
     width: absolute;
     border-radius: 25px;
     position: absolute;
