@@ -4,8 +4,31 @@
     Register
 {% endblock %}
 
-{% block main %}
-    <p>TODO</p>
+{% block content %}
+<head>
+    <link href="/static/styles.css" rel="stylesheet">
+
+</head>
+<body class= "bannerRegister">
+    <div class="registerbox">
+        <br>
+        <h1 class= "h1register">Account Registration</h1>
+        <br>
+        <form>
+            <p>Username:</p>
+            <input type="text" name="" placeholder="Username">
+            <p>Password:</p>
+            <input type="text" name="" placeholder="Password"/>
+            <div class="login-submit">
+            <p>Confirm Password:</p>
+            <input type="text" name="" placeholder="Confirm Password"/>
+            <div class="register-submit">
+                <input type="submit" name="" value="Register"/>
+                <span></span> 
+            </div>
+        </form>
+    </div>
+</body>
 {% endblock %}
 
 <!-- create a register page with the forms for name, username, password, and an option to use whether they are registering as hospital admin or patient -->

@@ -11,3 +11,9 @@ CREATE TABLE hospital(
     opening TEXT NOT NULL,
     closing TEXT NOT NULL
 );
+CREATE TABLE users(
+    id INTEGER,
+    username TEXT NOT NULL,
+    hash TEXT NOT NULL,
+    type TEXT NOT NULL
+);

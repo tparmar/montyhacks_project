@@ -13,6 +13,14 @@ from helpers import apology, login_required, usd
 
 #run this in your terminal before starting the flask application:
 #export set FLASK_APP=application
+#for you guys, its just set FLASK_APP=application
+
+# Nihaal- I need to do this to run it. It is the only way to change the environment to development in powershell.
+# cd montyhacks_project
+# $env:FLASK_APP = "application"
+# $env:FLASK_ENV = "development"
+# flask run
+
 #This will set the flask application
 con = sqlite3.connect("hospital.db", check_same_thread = False)
 cursor = con.cursor()
@@ -58,6 +66,35 @@ def login():
 
 @app.route("/register", methods = ["GET", "POST"])
 def register():
+    # session.clear()
+    # if request.method == "POST":
+
+    #     if not request.form.get("username"):
+    #         return apology("Missing username!", 400)
+
+
+    #     elif not request.form.get("password"):
+    #         return apology("Missing password!", 400)
+
+
+    #     elif request.form.get("password") != request.form.get("confirmation"):
+    #         return apology("Passwords don't match!", 400)
+
+    #     else:
+
+    #         if len(cursor.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
+
+    #             hash_pwd = generate_password_hash(request.form.get("password"))
+
+    #             user_id = cursor.execute("INSERT INTO users (username, hash) VALUES(:username, :hash)",
+    #                              username=request.form.get("username"), hash=hash_pwd)
+    #             session["user_id"] = user_id
+
+    #             flash("Registered successfully!")
+    #             return redirect("/")
+    #         else:
+    #             return apology("Please choose another username!", 400)
+
     return render_template("register.html")
 
 #make user input part of sql table
