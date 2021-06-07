@@ -11,7 +11,7 @@ from mysql.connector import Error
 import pandas as pd
 from helpers import apology, login_required, usd
 
-#test
+
 #run this in your terminal before starting the flask application:
 #export set FLASK_APP=application
 #for you guys, its just set FLASK_APP=application
@@ -21,7 +21,7 @@ from helpers import apology, login_required, usd
 # $env:FLASK_APP = "application"
 # $env:FLASK_ENV = "development"
 # flask run
-
+# test
 #This will set the flask application
 con = sqlite3.connect("hospital.db", check_same_thread = False)
 cursor = con.cursor()
