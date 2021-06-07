@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
+/* Layout */
 .banner{
     width: 100%;
     height: 100vh;
@@ -46,6 +47,7 @@
 }
 .navbar ul li:hover::after{
     width: 100%;
+/* Homepage */
 }
 .homepage{
     width: 100%;
@@ -70,7 +72,7 @@ button{
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: bold;
     border: 2px solid #ffaaaa;
     background: transparent;
@@ -83,7 +85,7 @@ span{
     background: #ffaaaa;
     height: 100%;
     width: 0;
-    border-radius: 20px;
+    border-radius: 25px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -98,7 +100,7 @@ button:hover{
 }
 
 /* Locations Near Me */
-.bannerlocations{
+.bannerLocations{
     background: black;
     background-size: cover;
     background-position: center;
@@ -108,4 +110,82 @@ button:hover{
     background: black;
     background-size: cover;
     background-position: center;
+}
+/* Login */
+.bannerLogin{
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+.h1login{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.loginbox p{
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 290px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+}
+.login-submit input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ffaaaa;
+    color: black;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid #ffaaaa;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.login-submit span{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 120px;
+    background: #ffaaaa;
+    height: 40px;
+    width: absolute;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+.login-submit:hover span{
+    width: 290px;
+}
+.login-submit:hover{
+    border:none;
 }
