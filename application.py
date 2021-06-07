@@ -11,7 +11,7 @@ from mysql.connector import Error
 import pandas as pd
 from helpers import apology, login_required, usd
 
-#test
+
 #run this in your terminal before starting the flask application:
 #export set FLASK_APP=application
 #for you guys, its just set FLASK_APP=application
