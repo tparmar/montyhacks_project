@@ -73,7 +73,6 @@
 .homepage{
     width: 100%;
     position: static;
-    top: 50%;
     transform: translateY(-50%);
     text-align: center;
     color: rgb(255, 255, 255);
@@ -81,7 +80,7 @@
 .homepage h1{
     font-weight: bold;
     font-size: 70px;
-    margin-top: 25%;
+    margin-top: 33%;
 }
 .homepage p{
     margin: 20px auto;
