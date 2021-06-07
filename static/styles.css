@@ -275,3 +275,11 @@ button:hover{
 .register-submit:hover{
     border:none;
 }
+.year input[type="text"], [name="year"]{
+    width: 100px;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 10px;
+    color: black;
+    font-size: 15px;
+}
