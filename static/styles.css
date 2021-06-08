@@ -123,7 +123,7 @@ button:hover{
     margin-top: 25px;
     margin: 0px;
     width: 30%;
-    margin-left: 2.5%;
+    margin-left: 3%;
     margin-right: 60%;
     height: 400px;
     background: #ffffff;
@@ -168,15 +168,13 @@ button:hover{
     overflow-wrap:initial;
 }
 .htextbox2{
-    float: left;
-    margin-top: -365px;
-    width: 102%;
-    margin-left: 110%;
+    float: right;
+    width: 30%;
+    margin-left: 35%;
     height: 400px;
     background: #ffffff;
     color: black;
     left: 0%;
-    position: absolute;
     box-sizing: border-box;
     border: 5px #ffaaaa solid;
     position:absolute;
@@ -212,15 +210,13 @@ button:hover{
 
 /* this is htextbox3 */
 .htextbox3{
-    float: left;
-    margin-top: -387px;
-    width: 102%;
-    margin-left: 110%;
+    float: right;
+    width: 30%;
+    margin-left: 67%;
     height: 400px;
     background: #ffffff;
     color: black;
     left: 0%;
-    position: absolute;
     box-sizing: border-box;
     border: 5px #ffaaaa solid;
     position:absolute;
