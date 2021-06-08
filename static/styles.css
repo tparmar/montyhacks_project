@@ -121,7 +121,7 @@ button:hover{
 }
 .htextbox{
     margin-top: 25px;
-    margin: 100px;
+    margin: 0px;
     width: 86%;
     margin-left: 7%;
     height: 500px;
@@ -320,7 +320,7 @@ button:hover{
 .register-submit span{
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 7px;
+    margin-bottom: 24px;
     background: #ffaaaa;
     height: 40px;
     width: absolute;
