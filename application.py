@@ -10,8 +10,8 @@ import mysql.connector
 from mysql.connector import Error
 import pandas as pd
 from helpers import apology, login_required, usd
-
-
+import cs50
+from cs50 import SQL
 
 #export set FLASK_APP=application
 
@@ -24,7 +24,7 @@ from helpers import apology, login_required, usd
 #This will set the flask application
 con = sqlite3.connect("hospital.db", check_same_thread = False)
 cursor = con.cursor()
-
+db = SQL("sqlite:///hospital.db")
 #configure application
 app = Flask(__name__)
 
@@ -49,22 +49,21 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 @app.route("/")
-
 def index():
     return render_template("index.html")
 
 @app.route("/locations", methods = ["GET", "POST"])
-
+@login_required
 def locations():
     return render_template("locations.html")
 
 @app.route("/records", methods = ["GET", "POST"])
-
+@login_required
 def records():
     return render_template("records.html")
 
-@app.route("/login", methods = ["GET", "POST"])
 
+@app.route("/login", methods = ["GET", "POST"])
 def login():
     """Log user in"""
 
@@ -100,7 +99,6 @@ def login():
         return render_template("login.html")
 
 @app.route("/register", methods = ["GET", "POST"])
-
 def register():
     session.clear()
     if request.method == "POST":
@@ -118,11 +116,11 @@ def register():
 
         else:
 
-            if len(cursor.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
+            if len(db.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
 
                 hash_pwd = generate_password_hash(request.form.get("password"))
 
-                user_id = cursor.execute("INSERT INTO users (username, hash, type, birth, name, gender) VALUES(:username, :hash, :type, :birth, :name, :gender)",
+                user_id = db.execute("INSERT INTO users (username, hash, type, birth, name, gender) VALUES(:username, :hash, :type, :birth, :name, :gender)",
                                  username=request.form.get("username"), hash=hash_pwd, type=request.form.get("type"), birth=request.form.get("DOB"), name=request.form.get("name"), gender=request.form.get("gender"))
                 session["user_id"] = user_id
 
@@ -132,3 +130,24 @@ def register():
                 return apology("Please choose another username!", 400)
     else:
         return render_template("register.html")
+
+@app.route("/logout")
+def logout():
+    """Log user out"""
+
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to login form
+    return redirect("/")
+
+def errorhandler(e):
+    """Handle error"""
+    if not isinstance(e, HTTPException):
+        e = InternalServerError()
+    return apology(e.name, e.code)
+
+
+# Listen for errors
+for code in default_exceptions:
+    app.errorhandler(code)(errorhandler)
