@@ -1,6 +1,6 @@
 import sqlite3
 import flask
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, render_template, request, session, url_for
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
@@ -91,7 +91,7 @@ def login():
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
-        return redirect("/")
+        return render_template("index.html", session = session["user_id"])
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
