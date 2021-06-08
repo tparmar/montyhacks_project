@@ -367,3 +367,54 @@ button:hover{
     font-size: 15px;
     font-weight: bold;
 }
+
+
+/* Location Textbox */
+
+.htextboxa{
+    margin-top: 25px;
+    margin: 100px;
+    width: 30%;
+    margin-left: 7%;
+    height: 800px;
+    background: #ffffff;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+}
+.htextboxa h1{
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextboxa img{
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    margin-right: 7%;
+}
+.htextboxa p{
+    margin-left: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 18px;
+    display: flex;
+    margin-right: 7%;
+    overflow-wrap:initial;
+}
+.htextboxa h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
