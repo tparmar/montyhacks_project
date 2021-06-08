@@ -135,7 +135,7 @@ button:hover{
 }
 .htextbox h1{
     margin-right: 45%;
-    margin-left: 20%;
+    margin-left: 7%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight: none;
@@ -146,10 +146,10 @@ button:hover{
     float: right;
     margin-left: 3%;
     display: flex;
-    margin-right: 10%;
+    margin-right: 7%;
 }
 .htextbox p{
-    margin-left: 10%;
+    margin-left: 7%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
