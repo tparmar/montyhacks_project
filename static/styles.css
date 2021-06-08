@@ -124,7 +124,7 @@ button:hover{
     margin: 0px;
     width: 86%;
     margin-left: 7%;
-    height: 500px;
+    height: 550px;
     background: #ffffff;
     color: black;
     left: 0%;
@@ -158,12 +158,12 @@ button:hover{
     overflow-wrap:initial;
 }
 .htextbox h6{
-    margin-left: 21.5%;
+    margin-left: 7%;
+    margin-right: 40%;
     text-align: center;
     color: #2c2c2cf3;
-    font-weight:darker;
+    font-weight: bold;
     font-size: 30px;
-    display: flex;
     overflow-wrap:initial;
 }
 
