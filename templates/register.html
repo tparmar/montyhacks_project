@@ -13,79 +13,33 @@
     <div class="registerbox">
         <br>
         <h1 class= "h1register">Account Registration</h1>
-        <br>
         <form>
             <p>Username:</p>
             <input type="text" name="" placeholder="Username" id = "username">
             <p>Password:</p>
             <input type="text" name="" placeholder="Password" id = "password"/>
-            <div class="login-submit">
             <p>Confirm Password:</p>
-            <input type="text" name="" placeholder="Confirm Password"/>
+            <input type="text" name="" placeholder="Confirm Password" id = "confirm"/>
             <p>Name: First Last</p>
-            <input type="text" name="" placeholder="First Last"/>
-            <p></p>
-            <select>
-                <option disabled selected value="">Date</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>31</option>
-            </select>
-            <select>
-                <option disabled selected value="">Month</option>
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-                <option>May</option>
-                <option>June</option>
-                <option>July</option>
-                <option>August</option>
-                <option>September</option>
-                <option>October</option>
-                <option>November</option>
-                <option>December</option>
-            </select>
-
-            <input class="year" type="text" name="year" placeholder="year"/>
-
-            <select>
-                <option disabled selected value="">Type</option>
+            <input type="text" name="" placeholder="First Last" id = "name"/>
+            <p>Account-Type</p>
+            <select class="dropdowntype" id = "type">
+                <option disabled selected value="">Select-here</option>
                 <option>Admin</option>
                 <option>Patient</option>
             </select>
+            <br></br>
+            <p>Date-of-Birth</p>
+            <input type="date" id="DOB"
+                   value="2021-06-12"
+                   min="1900-01-01" max="2021-06-12">
             <div class="register-submit">
                 <input type="submit" name="" value="Register"/>
                 <span></span> 
             </div>
+            <br>
+            <br>
+            <br>
         </form>
     </div>
 </body>

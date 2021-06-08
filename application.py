@@ -12,9 +12,8 @@ import pandas as pd
 from helpers import apology, login_required, usd
 
 
-#run this in your terminal before starting the flask application:
+
 #export set FLASK_APP=application
-#for you guys, its just set FLASK_APP=application
 
 # Nihaal- I need to do this to run it. It is the only way to change the environment to development in powershell.
 # cd montyhacks_project
@@ -57,7 +56,7 @@ def index():
 def locations():
     return render_template("locations.html")
 
-@app.route("/record", methods = ["GET", "POST"])
+@app.route("/records", methods = ["GET", "POST"])
 def records():
     return render_template("records.html")
 
@@ -118,13 +117,13 @@ def register():
 
                 hash_pwd = generate_password_hash(request.form.get("password"))
 
-                user_id = cursor.execute("INSERT INTO users (username, hash) VALUES(:username, :hash)",
-                                 username=request.form.get("username"), hash=hash_pwd)
+                user_id = cursor.execute("INSERT INTO users (username, hash, type, birth, name, gender) VALUES(:username, :hash, :type, :birth, :name, :gender)",
+                                 username=request.form.get("username"), hash=hash_pwd, type=request.form.get("type"), birth=request.form.get("DOB"), name=request.form.get("name"), gender=request.form.get("gender"))
                 session["user_id"] = user_id
 
                 flash("Registered successfully!")
                 return redirect("/")
             else:
                 return apology("Please choose another username!", 400)
-
-    return render_template("register.html")
+    else:
+        return render_template("register.html")
