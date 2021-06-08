@@ -266,7 +266,7 @@ button:hover{
     margin-top: 125px;
     margin-bottom: 100px;
     width: 330px;
-    height: 720px;
+    height: 825px;
     background: white;
     color: black;
     top: 50%;
@@ -320,7 +320,7 @@ button:hover{
 .register-submit span{
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 31px;
     background: #ffaaaa;
     height: 40px;
     width: absolute;
