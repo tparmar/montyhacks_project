@@ -122,9 +122,10 @@ button:hover{
 .htextbox{
     margin-top: 25px;
     margin: 0px;
-    width: 86%;
-    margin-left: 7%;
-    height: 550px;
+    width: 30%;
+    margin-left: 3%;
+    margin-right: 60%;
+    height: 400px;
     background: #ffffff;
     color: black;
     left: 0%;
@@ -133,12 +134,12 @@ button:hover{
     border: 5px #ffaaaa solid;
 }
 .htextbox h1{
-    margin-right: 30%;
+    margin-right: 7%;
     margin-left: 7%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
-    font-size: 70px;
+    font-size: 40px;
     text-decoration: underline #ffaaaa;
 }
 .htextbox img{
@@ -152,67 +153,100 @@ button:hover{
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
-    font-size: 30px;
+    font-size: 18px;
     display: flex;
-    margin-right: 30%;
+    margin-right: 7%;
     overflow-wrap:initial;
 }
 .htextbox h6{
     margin-left: 7%;
-    margin-right: 40%;
+    margin-right: 7%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     overflow-wrap:initial;
 }
-
-/* this is htextbox2 */
 .htextbox2{
-    margin-top: 400px;
-    margin: 0px;
-    width: 100%;
-    margin-left: 0%;
-    height: 500px;
+    float: right;
+    width: 30%;
+    margin-left: 35%;
+    height: 400px;
     background: #ffffff;
     color: black;
     left: 0%;
-    position: absolute;
     box-sizing: border-box;
     border: 5px #ffaaaa solid;
+    position:absolute;
 }
 .htextbox2 h1{
-    margin-right: 30%;
+    margin-right: 7%;
     margin-left: 7%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
-    font-size: 70px;
+    font-size: 40px;
     text-decoration: underline #ffaaaa;
-}
-.htextbox2 img{
-    float: right;
-    margin-left: 3%;
-    display: flex;
-    margin-right: 7%;
 }
 .htextbox2 p{
     margin-left: 7%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
-    font-size: 30px;
+    font-size: 18px;
     display: flex;
-    margin-right: 30%;
+    margin-right: 7%;
     overflow-wrap:initial;
 }
 .htextbox2 h6{
-    margin-left: 21.5%;
+    margin-left: 7%;
+    margin-right: 7%;
     text-align: center;
     color: #2c2c2cf3;
-    font-weight:darker;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+
+/* this is htextbox3 */
+.htextbox3{
+    float: right;
+    width: 30%;
+    margin-left: 67%;
+    height: 400px;
+    background: #ffffff;
+    color: black;
+    left: 0%;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+    position:absolute;
+}
+.htextbox3 h1{
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextbox3 p{
+    margin-left: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 18px;
     display: flex;
+    margin-right: 7%;
+    overflow-wrap:initial;
+}
+.htextbox3 h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
     overflow-wrap:initial;
 }
 /* Locations Near Me */
@@ -413,4 +447,55 @@ button:hover{
     color: black;
     font-size: 15px;
     font-weight: bold;
+}
+
+
+/* Location Textbox */
+
+.htextboxa{
+    margin-top: 25px;
+    margin: 100px;
+    width: 30%;
+    margin-left: 7%;
+    height: 800px;
+    background: #ffffff;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+}
+.htextboxa h1{
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextboxa img{
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    margin-right: 7%;
+}
+.htextboxa p{
+    margin-left: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 18px;
+    display: flex;
+    margin-right: 7%;
+    overflow-wrap:initial;
+}
+.htextboxa h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
 }

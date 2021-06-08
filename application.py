@@ -52,7 +52,6 @@ def index():
     return render_template("index.html")
 
 @app.route("/locations", methods = ["GET", "POST"])
-@login_required
 def locations():
     return render_template("locations.html")
 
