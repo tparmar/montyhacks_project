@@ -49,18 +49,22 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 @app.route("/")
+
 def index():
     return render_template("index.html")
 
 @app.route("/locations", methods = ["GET", "POST"])
+
 def locations():
     return render_template("locations.html")
 
 @app.route("/records", methods = ["GET", "POST"])
+
 def records():
     return render_template("records.html")
 
 @app.route("/login", methods = ["GET", "POST"])
+
 def login():
     """Log user in"""
 
@@ -96,6 +100,7 @@ def login():
         return render_template("login.html")
 
 @app.route("/register", methods = ["GET", "POST"])
+
 def register():
     session.clear()
     if request.method == "POST":
