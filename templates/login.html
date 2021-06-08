@@ -4,28 +4,28 @@
     Log-In
 {% endblock %}
 
-{% block content %}
-<head>
-    <link href="/static/styles.css" rel="stylesheet">
+{% block main %}
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
 
-</head>
-<body class= "bannerLogin">
-    <div class="loginbox">
-        <br>
-        <h1 class= "h1login">Account Log-In</h1>
-        <br>
-        <form>
-            <p>Username:</p>
-            <input type="text" name="" placeholder="Username" id = "username">
-            <p>Password:</p>
-            <input type="text" name="" placeholder="Password" id = "password"/>
-            <div class="login-submit">
-                <input type="submit" name="" value="Login"/>
-                <span></span> 
-            </div>
-        </form>
-    </div>
-</body>
+    </head>
+    <body class= "bannerLogin">
+        <div class="loginbox">
+            <br>
+            <h1 class= "h1login">Account Log-In</h1>
+            <br>
+            <form action = "/login" method = "post">
+                <p>Username:</p>
+                <input type="text" name="username" placeholder="Username">
+                <p>Password:</p>
+                <input type="text" name="password" placeholder="Password" />
+                <div class="login-submit">
+                    <input type="submit" name="" value="Login"/>
+                    <span></span> 
+                </div>
+            </form>
+        </div>
+    </body>
 {% endblock %}
 
 
