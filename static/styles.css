@@ -68,8 +68,9 @@
 }
 .navbar ul li:hover::after{
     width: 100%;
-/* Homepage */
 }
+/* Homepage */
+
 .homepage{
     width: 100%;
     position: static;
@@ -117,6 +118,45 @@ button:hover span{
 }
 button:hover{
     border: none;
+}
+.htextbox{
+    margin-top: 25px;
+    margin: 100px;
+    width: 86%;
+    margin-left: 7%;
+    height: 500px;
+    background: #fffffff3;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border-bottom: 5px #ffaaaa solid;
+    border-top: 5px #ffaaaa solid;
+}
+.htextbox h1{
+    margin-right: 45%;
+    margin-left: 20%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: none;
+    font-size: 70px;
+    text-decoration: underline #ffaaaa;
+}
+.htextbox img{
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    margin-right: 10%;
+}
+.htextbox p{
+    margin-left: 10%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 30px;
+    display: flex;
+    margin-right: 30%;
+    overflow-wrap:initial;
 }
 
 /* Locations Near Me */
