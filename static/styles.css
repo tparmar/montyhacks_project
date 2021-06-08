@@ -169,10 +169,10 @@ button:hover{
 
 /* this is htextbox2 */
 .htextbox2{
-    margin-top: 25px;
+    margin-top: 400px;
     margin: 0px;
-    width: 86%;
-    margin-left: 7%;
+    width: 100%;
+    margin-left: 0%;
     height: 500px;
     background: #ffffff;
     color: black;
