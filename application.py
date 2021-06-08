@@ -22,8 +22,7 @@ from cs50 import SQL
 # flask run
 # test
 #This will set the flask application
-con = sqlite3.connect("hospital.db", check_same_thread = False)
-cursor = con.cursor()
+
 db = SQL("sqlite:///hospital.db")
 #configure application
 app = Flask(__name__)
@@ -82,7 +81,7 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = cursor.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
@@ -139,7 +138,7 @@ def logout():
     session.clear()
 
     # Redirect user to login form
-    return redirect("/")
+    return redirect("/login")
 
 def errorhandler(e):
     """Handle error"""
