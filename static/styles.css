@@ -96,7 +96,7 @@ button{
     border-radius: 28px;
     font-weight: bold;
     border: 2px solid #ffaaaa;
-    background: transparent;
+    background: #fafafa;
     color: rgb(0, 0, 0);
     cursor: pointer;
     position: absolute;
