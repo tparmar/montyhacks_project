@@ -11,6 +11,7 @@ from helpers import apology, login_required, usd
 import cs50
 from cs50 import SQL
 
+
 #export set FLASK_APP=application
 
 # Nihaal- I need to do this to run it. It is the only way to change the environment to development in powershell.
@@ -27,6 +28,7 @@ app = Flask(__name__)
 
 #Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+
 
 # Ensure responses aren't cached
 @app.after_request
@@ -51,7 +53,7 @@ def index():
 
 @app.route("/locations", methods = ["GET", "POST"])
 def locations():
-    return render_template("locations.html")
+    return render_template("locations.html", mymap=mymap, sndmap=sndmap)
 
 @app.route("/records", methods = ["GET", "POST"])
 @login_required
@@ -86,7 +88,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-
+        print("user_id=", session["user_id"])
         # Redirect user to home page
         return render_template("index.html", session = session["user_id"])
 
