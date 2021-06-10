@@ -16,13 +16,11 @@ from datetime import datetime
 
 #export set FLASK_APP=application
 
-# Nihaal- I need to do this to run it. It is the only way to change the environment to development in powershell.
+
 # cd montyhacks_project
 # $env:FLASK_APP = "application"
 # $env:FLASK_ENV = "development"
 # flask run
-# test
-#This will set the flask application
 
 db = SQL("sqlite:///hospital.db")
 #configure application
@@ -55,7 +53,7 @@ def index():
 
 @app.route("/locations", methods = ["GET", "POST"])
 def locations():
-    return render_template("locations.html", mymap=mymap, sndmap=sndmap)
+    return render_template("locations.html")
 
 @app.route("/records", methods = ["GET", "POST"])
 @login_required
