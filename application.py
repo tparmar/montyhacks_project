@@ -6,8 +6,6 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 import os
-import mysql.connector
-from mysql.connector import Error
 import pandas as pd
 from helpers import apology, login_required, usd
 import cs50
