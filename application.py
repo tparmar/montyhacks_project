@@ -13,15 +13,14 @@ from cs50 import SQL
 import googlemaps
 from datetime import datetime
 
+
 #export set FLASK_APP=application
 
-# Nihaal- I need to do this to run it. It is the only way to change the environment to development in powershell.
+
 # cd montyhacks_project
 # $env:FLASK_APP = "application"
 # $env:FLASK_ENV = "development"
 # flask run
-# test
-#This will set the flask application
 
 db = SQL("sqlite:///hospital.db")
 #configure application
@@ -29,6 +28,7 @@ app = Flask(__name__)
 
 #Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+
 
 # Ensure responses aren't cached
 @app.after_request
@@ -88,7 +88,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-
+        print("user_id=", session["user_id"])
         # Redirect user to home page
         return render_template("index.html", session = session["user_id"])
 
