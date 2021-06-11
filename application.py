@@ -10,7 +10,6 @@ import pandas as pd
 from helpers import apology, login_required, usd
 import cs50
 from cs50 import SQL
-import googlemaps
 from datetime import datetime
 
 
@@ -46,6 +45,7 @@ app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+
 
 @app.route("/")
 def index():
@@ -86,11 +86,13 @@ def login():
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid username and/or password", 403)
 
+        print(rows)
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        print("user_id=", session["user_id"])
+        print(session["user_id"])
+        sign_in = True
         # Redirect user to home page
-        return render_template("index.html", session = session["user_id"])
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
@@ -121,7 +123,7 @@ def register():
                 user_id = db.execute("INSERT INTO users (username, hash, type, birth, name, gender) VALUES(:username, :hash, :type, :birth, :name, :gender)",
                                  username=request.form.get("username"), hash=hash_pwd, type=request.form.get("type"), birth=request.form.get("DOB"), name=request.form.get("name"), gender=request.form.get("gender"))
                 session["user_id"] = user_id
-
+                sign_in = True
                 flash("Registered successfully!")
                 return redirect("/")
             else:
@@ -135,7 +137,6 @@ def logout():
 
     # Forget any user_id
     session.clear()
-
     # Redirect user to login form
     return redirect("/login")
 
