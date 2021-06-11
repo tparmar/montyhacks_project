@@ -12,5 +12,6 @@ CREATE TABLE users(
     type TEXT NOT NULL,
     birth NUMERIC,
     name TEXT NOT NULL,
-    gender TEXT NOT NULL
+    gender TEXT NOT NULL,
+    PRIMARY KEY(id)
 );
