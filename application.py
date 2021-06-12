@@ -86,11 +86,10 @@ def login():
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid username and/or password", 403)
 
-        print(rows)
+
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        print(session["user_id"])
-        sign_in = True
+        
         # Redirect user to home page
         return redirect("/")
 
@@ -100,15 +99,15 @@ def login():
 
 @app.route("/register", methods = ["GET", "POST"])
 def register():
+    #Just in case, clear and user sessions
     session.clear()
+
+    #if register form is submitted
     if request.method == "POST":
 
-        if not request.form.get("username"):
-            return apology("Missing username!", 400)
-
-
-        elif not request.form.get("password"):
-            return apology("Missing password!", 400)
+        #if username
+        if not request.form.get("username") or not request.form.get("password") or not request.form.get("DOB") or not request.form.get("name") or not request.form.get("gender") or not request.form.get("type"):
+            return apology("Missing credential", 400)
 
 
         elif request.form.get("password") != request.form.get("confirmation"):
@@ -116,12 +115,12 @@ def register():
 
         else:
 
-            if len(db.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))) == 0:
+            if len(db.execute("SELECT * FROM users WHERE username = :username", username = request.form.get("username"))) == 0:
 
                 hash_pwd = generate_password_hash(request.form.get("password"))
 
                 user_id = db.execute("INSERT INTO users (username, hash, type, birth, name, gender) VALUES(:username, :hash, :type, :birth, :name, :gender)",
-                                 username=request.form.get("username"), hash=hash_pwd, type=request.form.get("type"), birth=request.form.get("DOB"), name=request.form.get("name"), gender=request.form.get("gender"))
+                                 username=request.form.get("username"), hash = hash_pwd, type = request.form.get("type"), birth = request.form.get("DOB"), name = request.form.get("name"), gender = request.form.get("gender"))
                 session["user_id"] = user_id
                 sign_in = True
                 flash("Registered successfully!")
