@@ -16,6 +16,7 @@
     background:url(../static/background.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.247),rgba(255, 2, 2, 0.603)),url(background.jpg);
     background-attachment: fixed;
+    height: 1600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;  
@@ -151,7 +152,7 @@ button:hover{
     border-top: 5px #ffaaaa solid;
 }
 .htextbox h1{
-    margin-right: 7%;
+    margin-right: 40%;
     margin-left: 7%;
     text-align: center;
     color: #000000f3;
@@ -170,9 +171,9 @@ button:hover{
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
-    font-size: px;
+    font-size: 24px;
     display: flex;
-    margin-right: 7%;
+    margin-right: 40%;
     overflow-wrap:initial;
 }
 .htextbox h6{
@@ -187,7 +188,7 @@ button:hover{
 .htextbox2{
     margin-top: 700px;
     width: 100%;
-    height: 900px;
+    height: 700px;
     background: #ffaaaad7;
     color: black;
     left: 0%;
@@ -197,7 +198,7 @@ button:hover{
 }
 .htextbox2 h1{
     margin-right: 7%;
-    margin-left: 7%;
+    margin-left: 40%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
@@ -212,11 +213,11 @@ button:hover{
     background-color: white;
 }
 .htextbox2 p{
-    margin-left: 7%;
+    margin-left: 40%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
-    font-size: 18px;
+    font-size: 24px;
     display: flex;
     margin-right: 7%;
     overflow-wrap:initial;
@@ -234,8 +235,8 @@ button:hover{
 /* this is htextbox3 */
 .htextbox3{
     width: 100%;
-    height: 700px;
-    margin-top: 1600px;
+    height: 200px;
+    margin-top: 1400px;
     background: #ffffffbe;
     color: black;
     left: 0%;
