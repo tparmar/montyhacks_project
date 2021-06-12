@@ -18,7 +18,9 @@
     <nav>
       <div class="fixednavbar">
         <div class="navbar">
-          <img src="/static/logo.png" class="logo">
+          <a href="/" class="logo">
+            <img alt="logo" src="/static/logo.png" class="logo">
+          </a>
           {% if session.user_id %}
             <ul>
               <li><a href="/">Home</a></li>
