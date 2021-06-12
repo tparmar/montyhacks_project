@@ -14,7 +14,7 @@
 } */
 .banner{
     background:url(../static/background.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.171),rgba(0,0,0,0.75)),url(background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.171),rgba(179, 179, 179, 0.603)),url(background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@
     position: static;
     transform: translateY(-50%);
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .homepage h1{
     font-weight: bold;
@@ -85,7 +85,7 @@
     text-decoration: underline #ffaaaa;
 }
 .homepage p{
-    margin: 20px auto;
+    margin: 35px auto;
     font-weight: 100;
     line-height: 25px;
 }
@@ -460,7 +460,7 @@ button:hover{
     margin: 100px;
     width: 30%;
     margin-left: 7%;
-    height: 800px;
+    height: 539px;
     background: #ffffff;
     color: black;
     left: 0%;
@@ -504,7 +504,7 @@ button:hover{
 }
 .map {
     position: relative;
-    height: 800px;
+    height: 1000%;
     width: 100%;
   }
   .mapcover{
