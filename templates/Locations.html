@@ -6,29 +6,36 @@
 {% endblock %}
 
 {% block main %}
-<head>
-    <title>Locations</title>
-    <link href="/static/styles.css" rel="stylesheet">
-</head>
-<body class= "banner">
-    <div class="htextboxa">
-        <br>
-        <h1>Locations</h1>
-        <br>
-        <p> Use the Google Maps embed to find information regarding the closest hospitals and emergency rooms in the area. 
-            Use the link below for information regarding the opening and closing times of hospitals in the area. 
-        </p>
-        <br>
-        <br><br><br><br><br>
-    </div>
-    <div class="mapcover">
-        <iframe  class="map"src="https://www.google.com/maps/d/u/0/embed?mid=1147CshSU5YU-s2iHpVEc1nIyOpxsN7EP"></iframe>
-        <!-- https://www.google.com/maps/d/u/0/viewer?mid=1147CshSU5YU-s2iHpVEc1nIyOpxsN7EP&ll=40.36621118150702%2C-74.66137564768417&z=8 -->
-    </div>
-    <div class="mapcover">
-        <h1>Emergency Rooms near Montgomery NJ</h1>
-        
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
+    <head>
+        <title>Locations</title>
+        <link href="/static/styles.css" rel="stylesheet">
+    </head>
+    <body class= "banner">
+        <script>
+
+            navigator.geolocation.getCurrentPosition(function(position) {
+                document.write(position.coords.latitude + ", " + position.coords.longitude);
+            });
+
+        </script>
+        <div class="htextboxa">
+            <br>
+            <h1>Locations</h1>
+            <br>
+            <p> Use the Google Maps embed to find information regarding the closest hospitals and emergency rooms in the area. 
+                Use the link below for information regarding the opening and closing times of hospitals in the area. 
+            </p>
+            <br>
+            <br><br><br><br><br>
+        </div>
+        <div class="mapcover">
+            <iframe  class="map"src="https://www.google.com/maps/d/u/0/embed?mid=1147CshSU5YU-s2iHpVEc1nIyOpxsN7EP"></iframe>
+            <!-- https://www.google.com/maps/d/u/0/viewer?mid=1147CshSU5YU-s2iHpVEc1nIyOpxsN7EP&ll=40.36621118150702%2C-74.66137564768417&z=8 -->
+        </div>
+        <div class="mapcover">
+            <h1>Emergency Rooms near Montgomery NJ</h1>
+            
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
 {% endblock %}
