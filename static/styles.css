@@ -593,10 +593,9 @@ button:hover{
 }
 
 .adminbox{
-    margin-top: 125px;
-    margin-bottom: 100px;
-    width: 330px;
-    height: 825px;
+    margin-top: 500px;
+    width: 50%;
+    height: 1450px;
     background: white;
     color: black;
     top: 50%;
@@ -604,7 +603,7 @@ button:hover{
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
-    border: 2px #ffaaaa solid;
+    border: 5px #ffaaaa solid;
 }
 .h1admin{
     margin: 0;
@@ -615,13 +614,13 @@ button:hover{
 }
 .adminbox p{
     margin: 0;
-    margin-left: 15px;
+    margin-left: 10%;
     padding: 0;
     font-weight: bold;
 }
 .adminbox input{
-    width: 290px;
-    margin-left: 15px;
+    width: 80%;
+    margin-left: 10%;
     margin-bottom: 25px;
 }
 .adminbox input[type="text"], input[type="password"]{
@@ -648,11 +647,11 @@ button:hover{
     overflow: hidden;
 }
 .admin-submit span{
-    margin-left: 15px;
+    margin-left: 10%;
     margin-right: 15px;
     margin-bottom: 31px;
     background: #ffaaaa;
-    height: 40px;
+    height: 50px;
     width: absolute;
     border-radius: 25px;
     position: absolute;
@@ -662,29 +661,8 @@ button:hover{
     transition: 0.5s
 }
 .admin-submit:hover span{
-    width: 290px;
+    width: 80%;
 }
 .admin-submit:hover{
     border:none;
-}
-.admin-submit input[type="date"] {
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-    height: 50px;
-    color: black;
-    font-size: 15px;
-    font-weight: lighter;
-}
-.dropdowntype{
-    width: 290px;
-    margin-left: 15px;
-    position: center;
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-    height: 50px;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
 }
