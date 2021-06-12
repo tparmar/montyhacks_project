@@ -12,36 +12,34 @@
     <body class= "banner">
         <div class="adminbox">
             <br>
-            <h1 class= "h1admin">Account Registration</h1>
+            <h1 class= "h1admin">Input Patient's Medical Information</h1>
             <form action = "/register" method = "post">
-                <p>Username:</p>
-                <input type="text" name="username" placeholder="Username">
-                <p>Password:</p>
-                <input type="password" name="password" placeholder="Password"/>
-                <p>Confirm Password:</p>
-                <input type="password" name="confirmation" placeholder="Confirm Password"/>
-                <p>Name: First Last</p>
-                <input type="text" name="name" autocomplete = "off" placeholder="First Last"/>
-                <p>Account-Type</p>
-                <select class="dropdowntype" name = "type">
-                    <option disabled selected value="">Select-here</option>
-                    <option>Admin</option>
-                    <option>Patient</option>
-                </select>
-                <br>
-                <br>
-                <p>Gender</p>
-                <select class="dropdowntype" name = "gender">
-                    <option disabled selected value="">Select-here</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
-                </select>
-                <br><br>
-                <p>Date-of-Birth</p>
-                <input type="date" name="DOB"
-                    value="2021-06-12"
-                    min="1900-01-01" max="2021-06-12">
+                <p>Patient's Name:</p>
+                <input type="text" name="name" placeholder="-first last-">
+                <p>Surgical History:</p>
+                <input type="text" name="password" placeholder="-surgical history-"/>
+                <p>Obsteric History:</p>
+                <input type="text" name="obsteric-history" placeholder="-obsteric history-"/>
+                <p>Medications</p>
+                <input type="text" name="medications" placeholder="-medications-"/>
+                <p>Allergies</p>
+                <input type="text" name="allergies" placeholder="-allergies-"/>
+                <p>Family History</p>
+                <input type="text" name="family_history" placeholder="-family history-"/>
+                <p>Social History</p>
+                <input type="text" name="social_history" placeholder="-social history-"/>
+                <p>Habits</p>
+                <input type="text" name="habits" placeholder="-habits-"/>
+                <p>Immunization</p>
+                <input type="text" name="immunization" placeholder="-immunizitation-"/>
+                <p>Developmental History</p>
+                <input type="text" name="developmental_history" placeholder="-developmental history-"/>
+                <p>Demographics</p>
+                <input type="text" name="demographics" placeholder="-demographics-"/>
+                <p>Medical Encounters</p>
+                <input type="text" name="medical_records" placeholder="-medical records-"/>
+                <p>Notes</p>
+                <input type="text" name="notes" placeholder="-extra patient info-"/>
                 <div class="admin-submit">
                     <input type="submit" name="" value="submit"/>
                     <span></span> 
