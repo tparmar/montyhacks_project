@@ -52,7 +52,7 @@ def index():
 
 @app.route("/admin_input", methods = ["GET", "POST"])
 @login_required
-def input():
+def admin_input():
     return render_template("admin_input.html")
 
 @app.route("/locations", methods = ["GET", "POST"])
