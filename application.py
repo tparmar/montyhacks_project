@@ -12,7 +12,6 @@ import cs50
 from cs50 import SQL
 from datetime import datetime
 
-
 #export set FLASK_APP=application
 
 
