@@ -141,7 +141,6 @@ button:hover{
     margin-top: 25px;
     margin: 0px;
     width: 100%;
-    margin-right: 60%;
     height: 700px;
     background: #ffffffe5;
     color: black;
@@ -152,19 +151,15 @@ button:hover{
     border-top: 5px #ffaaaa solid;
 }
 .htextbox h1{
-    margin-right: 40%;
+    margin-top: 7%;
+    margin-right: 50%;
     margin-left: 7%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
     font-size: 40px;
     text-decoration: underline #ffaaaa;
-}
-.htextbox img{
-    float: right;
-    margin-left: 3%;
-    display: flex;
-    margin-right: 7%;
+    display: inline-block;
 }
 .htextbox p{
     margin-left: 7%;
@@ -173,7 +168,7 @@ button:hover{
     font-weight:lighter;
     font-size: 24px;
     display: flex;
-    margin-right: 40%;
+    margin-right: 50%;
     overflow-wrap:initial;
 }
 .htextbox h6{
@@ -184,6 +179,17 @@ button:hover{
     font-weight: bold;
     font-size: 20px;
     overflow-wrap:initial;
+}
+.himg1{
+    margin-top: 7%;
+    width: 40%;
+    position: absolute;
+    border: 5px #ffaaaa solid;;
+}
+.htextbox img{
+    float: right;
+    margin-right: 7%;
+    margin-left: 55%;
 }
 .htextbox2{
     margin-top: 700px;
