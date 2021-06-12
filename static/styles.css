@@ -14,7 +14,7 @@
 } */
 .banner{
     background:url(../static/background.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.171),rgba(179, 179, 179, 0.603)),url(background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247),rgba(255, 2, 2, 0.603)),url(background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@
     position: static;
     transform: translateY(-50%);
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
 }
 .homepage h1{
     font-weight: bold;
@@ -128,7 +128,7 @@ button:hover{
     width: 100%;
     margin-right: 60%;
     height: 700px;
-    background: #ffffff;
+    background: #ffffffe5;
     color: black;
     left: 0%;
     position: absolute;
@@ -173,8 +173,8 @@ button:hover{
 .htextbox2{
     margin-top: 700px;
     width: 100%;
-    height: 700px;
-    background: #ffaaaa98;
+    height: 900px;
+    background: #ffaaaad7;
     color: black;
     left: 0%;
     box-sizing: border-box;
@@ -188,7 +188,7 @@ button:hover{
     color: #000000f3;
     font-weight: none;
     font-size: 40px;
-    text-decoration: underline #ffaaaa;
+    text-decoration: underline #ffaaaae0;
 }
 .htextbox2 p{
     margin-left: 7%;
@@ -212,11 +212,10 @@ button:hover{
 
 /* this is htextbox3 */
 .htextbox3{
-    float: right;
-    width: 30%;
-    margin-left: 67%;
-    height: 435px;
-    background: #ffffff;
+    width: 100%;
+    height: 700px;
+    margin-top: 1600px;
+    background: #ffffffbe;
     color: black;
     left: 0%;
     box-sizing: border-box;
