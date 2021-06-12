@@ -53,16 +53,32 @@ def index():
 @app.route("/admin_input", methods = ["GET", "POST"])
 @login_required
 def admin_input():
-    return render_template("admin_input.html")
+    if request.method == "POST":
+        if not db.execute("SELECT * from users WHERE name = :name", name = request.form.get("name")):
+            return apology("Couldn't get person", 400)
+        if not db.execute("INSERT INTO records (person_id, name, surgical_history, obstetric_history, medications, allergies, family_history, social_history, habits, immunization, developmental_history, demographics, medical_encounters, notes) VALUES (:person_id, :name, :surgical_history, :obstetric_history, :medications, :allergies, :family_history, :social_history, :habits, :immunization, :developmental_history, :demographics, :medical_encounters, :notes)",
+                    person_id = db.execute("SELECT id from users where name = :name", name = request.form.get("name"))[0]['id'], name=request.form.get("name"), surgical_history=request.form.get("surgical_history"), obstetric_history=request.form.get("obstetric_history"), medications=request.form.get("medications"), allergies=request.form.get("allergies"), family_history = request.form.get("family_history"), social_history=request.form.get("social_history"), habits=request.form.get("habits"), immunization=request.form.get("immunization"), developmental_history=request.form.get("developmental_history"), demographics=request.form.get("demographics"), medical_encounters=request.form.get("medical_encounters"), notes=request.form.get("notes")):
+            return apology("Missing credential", 400)
+        db.execute("INSERT INTO records (person_id, name, surgical_history, obstetric_history, medications, allergies, family_history, social_history, habits, immunization, developmental_history, demographics, medical_encounters, notes) VALUES (:person_id, :name, :surgical_history, :obstetric_history, :medications, :allergies, :family_history, :social_history, :habits, :immunization, :developmental_history, :demographics, :medical_encounters, :notes)",
+                    person_id = db.execute("SELECT id from users where name = :name", name = request.form.get("name"))[0]['id'], name=request.form.get("name"), surgical_history=request.form.get("surgical_history"), obstetric_history=request.form.get("obstetric_history"), medications=request.form.get("medications"), allergies=request.form.get("allergies"), family_history = request.form.get("family_history"), social_history=request.form.get("social_history"), habits=request.form.get("habits"), immunization=request.form.get("immunization"), developmental_history=request.form.get("developmental_history"), demographics=request.form.get("demographics"), medical_encounters=request.form.get("medical_encounters"), notes=request.form.get("notes"))
+        return redirect("/")
+    else:
+        return render_template("admin_input.html")
 
 @app.route("/locations", methods = ["GET", "POST"])
 def locations():
     return render_template("locations.html")
 
-@app.route("/records", methods = ["GET", "POST"])
+@app.route("/records", methods = ["GET"])
 @login_required
 def records():
-    return render_template("records.html")
+    if not db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"]):
+        return render_template("emptyRecords.html")
+    rows = db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"])
+    records = []
+    for row in rows:
+        records.append(list((row["name"], row["surgical_history"], row["obstetric_history"], row["medications"], row["allergies"], row["family_history"], row["social_history"], row["habits"], row["immunization"], row["developmental_history"], row["demographics"], row["medical_encounters"], row["notes"])))
+    return render_template("records.html", records = records)
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():
