@@ -188,7 +188,14 @@ button:hover{
     color: #000000f3;
     font-weight: none;
     font-size: 40px;
-    text-decoration: underline #ffaaaae0;
+    text-decoration: underline #ffffffe0;
+}
+.htextbox2 button{
+    background-color:#ffbfbf;
+    border-color: white;
+}
+.htextbox2 span{
+    background-color: white;
 }
 .htextbox2 p{
     margin-left: 7%;
