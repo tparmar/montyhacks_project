@@ -22,12 +22,21 @@
             <img alt="logo" src="/static/logo.png" class="logo">
           </a>
           {% if session.user_id %}
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/locations">Hospitals Near Me</a></li>
-              <li><a href="/records">Medical Records</a></li>
-              <li><a href="/logout">Log Out</a></li>
-            </ul>
+            {% if session.type %}
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/locations">Hospitals Near Me</a></li>
+                <li><a href="/admin_input">Input Patient Records</a>></li>
+                <li><a href="/logout">Log Out</a></li>
+              </ul>
+            {% else %}
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/locations">Hospitals Near Me</a></li>
+                <li><a href="/records">Medical Records</a></li>
+                <li><a href="/logout">Log Out</a></li>
+              </ul>
+            {% endif %}
           {% else %}
             <ul>
               <li><a href="/">Home</a></li>

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Admin Input
+{% endblock %}
+
+{% block main %}
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+
+    </head>
+    <body class= "banner">
+        <div class="adminbox">
+            <br>
+            <h1 class= "h1admin">Account Registration</h1>
+            <form action = "/register" method = "post">
+                <p>Username:</p>
+                <input type="text" name="username" placeholder="Username">
+                <p>Password:</p>
+                <input type="password" name="password" placeholder="Password"/>
+                <p>Confirm Password:</p>
+                <input type="password" name="confirmation" placeholder="Confirm Password"/>
+                <p>Name: First Last</p>
+                <input type="text" name="name" autocomplete = "off" placeholder="First Last"/>
+                <p>Account-Type</p>
+                <select class="dropdowntype" name = "type">
+                    <option disabled selected value="">Select-here</option>
+                    <option>Admin</option>
+                    <option>Patient</option>
+                </select>
+                <br>
+                <br>
+                <p>Gender</p>
+                <select class="dropdowntype" name = "gender">
+                    <option disabled selected value="">Select-here</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+                <br><br>
+                <p>Date-of-Birth</p>
+                <input type="date" name="DOB"
+                    value="2021-06-12"
+                    min="1900-01-01" max="2021-06-12">
+                <div class="admin-submit">
+                    <input type="submit" name="" value="submit"/>
+                    <span></span> 
+                </div>
+                <br>
+                <br>
+                <br>
+            </form>
+        </div>
+    </body>
+{% endblock %}
+
+<!-- create a register page with the forms for name, username, password, and an option to use whether they are registering as hospital admin or patient -->
