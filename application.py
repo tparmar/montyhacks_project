@@ -10,8 +10,6 @@ import pandas as pd
 from helpers import apology, login_required, usd
 import cs50
 from cs50 import SQL
-import googlemaps
-from datetime import datetime
 
 #export set FLASK_APP=application
 
