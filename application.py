@@ -27,7 +27,7 @@ app = Flask(__name__)
 #Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-
+admin = False
 # Ensure responses aren't cached
 @app.after_request
 def after_request(response):
@@ -50,19 +50,19 @@ Session(app)
 def index():
     return render_template("index.html")
 
+@app.route("/admin_input", methods = ["GET", "POST"])
+@login_required
+def input():
+    return render_template("admin_input.html")
+
 @app.route("/locations", methods = ["GET", "POST"])
 def locations():
     return render_template("locations.html")
-
-@app.route("/input", methods = ["GET", "POST"])
-def input():
-    return render_template()
 
 @app.route("/records", methods = ["GET", "POST"])
 @login_required
 def records():
     return render_template("records.html")
-
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():
@@ -92,6 +92,9 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
+        
+        if str(db.execute("SELECT type FROM users WHERE username = ?", request.form.get("username"))[0]["type"]) == "Admin":
+            session["type"] = rows[0]["type"]
         
         # Redirect user to home page
         return redirect("/")
