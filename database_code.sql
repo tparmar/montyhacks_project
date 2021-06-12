@@ -15,3 +15,10 @@ CREATE TABLE users(
     gender TEXT NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE records(
+    
+
+
+
+);

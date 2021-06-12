@@ -54,6 +54,10 @@ def index():
 def locations():
     return render_template("locations.html")
 
+@app.route("/input", methods = ["GET", "POST"])
+def input():
+    return render_template()
+
 @app.route("/records", methods = ["GET", "POST"])
 @login_required
 def records():
