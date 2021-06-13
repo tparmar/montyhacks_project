@@ -21,5 +21,31 @@
             <br><br><br><br><br>
         </div>
     </body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surgical History</th>
+                <th>Obstetric History</th>
+                <th>Medications</th>
+                <th>Allergies</th>
+                <th>Family History</th>
+                <th>Social History</th>
+                <th>Habits</th>
+                <th>Immunization</th>
+                <th>Developmental_history</th>
+                <th>Demographics</th>
+                <th>Medical Encounters</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for record in records %}
+                <td>{{ record }}</td>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
 
 {% endblock %}
