@@ -30,7 +30,5 @@ CREATE TABLE records(
     developmental_history TEXT NOT NULL,
     demographics TEXT NOT NULL,
     medical_encounters TEXT NOT NULL,
-    notes TEXT NOT NULL,
-    FOREIGN KEY(name) REFERENCES users(name)
-    FOREIGN KEY(person_id) REFERENCES users(id)
+    notes TEXT NOT NULL
 );
