@@ -153,8 +153,8 @@ def logout():
 @app.route("/records", methods = ["GET", "POST"])
 @login_required
 def records():
-    # if not db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"]):
-    #     return render_template("emptyRecords.html")
+    if not db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"]):
+        return render_template("emptyRecords.html")
     rows = db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"])
     print(session["user_id"])
     print(rows)
