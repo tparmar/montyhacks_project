@@ -538,11 +538,11 @@ button:hover{
     overflow-wrap:initial;
 }
 .htextboxb{
-    margin-top:100px;
+    margin-top:15%;
     width: 100%;
     margin-right: 60%;
-    height: 855px;
-    background: #ffffffe5;
+    height: 320%;
+    background: #ffffffd7;
     color: black;
     left: 0%;
     position: absolute;
@@ -551,7 +551,6 @@ button:hover{
     border-top: 5px #ffaaaa solid;
 }
 .htextboxb h1{
-    margin-top: 10%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
@@ -676,4 +675,20 @@ button:hover{
 }
 .admin-submit:hover{
     border:none;
+}
+.table{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width:70%;
+    border-top: 2px #ffaaaa solid;
+
+}
+.tableheader{
+    font-size: 25px;
+    text-decoration:  underline#ffaaaa;
+}
+.tablemain{
+    margin: 30%;
+    font-size: 20px;
 }
