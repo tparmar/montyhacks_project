@@ -14,7 +14,7 @@
 } */
 .banner{
     background:url(../static/background.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.247),rgba(255, 2, 2, 0.603)),url(background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247),#ffaaaa),url(background.jpg);
     background-attachment: fixed;
     height: 800px;
     background-size: cover;
@@ -141,7 +141,6 @@ button:hover{
     margin-top: 25px;
     margin: 0px;
     width: 100%;
-    margin-right: 60%;
     height: 700px;
     background: #ffffffe5;
     color: black;
@@ -152,19 +151,15 @@ button:hover{
     border-top: 5px #ffaaaa solid;
 }
 .htextbox h1{
-    margin-right: 40%;
+    margin-top: 7%;
+    margin-right: 50%;
     margin-left: 7%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
     font-size: 40px;
     text-decoration: underline #ffaaaa;
-}
-.htextbox img{
-    float: right;
-    margin-left: 3%;
-    display: flex;
-    margin-right: 7%;
+    display: inline-block;
 }
 .htextbox p{
     margin-left: 7%;
@@ -173,7 +168,7 @@ button:hover{
     font-weight:lighter;
     font-size: 24px;
     display: flex;
-    margin-right: 40%;
+    margin-right: 50%;
     overflow-wrap:initial;
 }
 .htextbox h6{
@@ -184,6 +179,25 @@ button:hover{
     font-weight: bold;
     font-size: 20px;
     overflow-wrap:initial;
+}
+.himg1{
+    width: 40%;
+    position: absolute;
+    border: 5px #ffaaaa solid;;
+    float: right;
+    margin-top: 7%;
+}
+.htextbox img{
+    margin-right: 7%;
+    margin-left: 55%;
+}
+.himg2{
+    border: 5px rgba(0, 0, 0, 0.342) solid;;
+    width: 40%;
+    position: absolute;
+    float: left;
+    margin-left: 7%;
+    margin-top: 10%;
 }
 .htextbox2{
     margin-top: 700px;
@@ -197,8 +211,9 @@ button:hover{
     position:absolute;
 }
 .htextbox2 h1{
+    margin-top: 10%;
     margin-right: 7%;
-    margin-left: 40%;
+    margin-left: 50%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
@@ -213,7 +228,7 @@ button:hover{
     background-color: white;
 }
 .htextbox2 p{
-    margin-left: 40%;
+    margin-left: 50%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
@@ -488,6 +503,7 @@ button:hover{
     border: 5px #ffaaaa solid;
 }
 .htextboxa h1{
+    margin-top: 27%;
     margin-right: 7%;
     margin-left: 7%;
     text-align: center;
@@ -525,7 +541,7 @@ button:hover{
     margin-top:100px;
     width: 100%;
     margin-right: 60%;
-    height: 800px;
+    height: 855px;
     background: #ffffffe5;
     color: black;
     left: 0%;
@@ -535,8 +551,7 @@ button:hover{
     border-top: 5px #ffaaaa solid;
 }
 .htextboxb h1{
-    margin-right: 40%;
-    margin-left: 7%;
+    margin-top: 10%;
     text-align: center;
     color: #000000f3;
     font-weight: none;
@@ -550,13 +565,10 @@ button:hover{
     margin-right: 7%;
 }
 .htextboxb p{
-    margin-left: 7%;
     text-align: center;
     color: #2c2c2cf3;
     font-weight:lighter;
     font-size: 24px;
-    display: flex;
-    margin-right: 40%;
     overflow-wrap:initial;
 }
 .htextboxb h6{
