@@ -13,52 +13,230 @@
     <body class= "banner">
         <div class="htextboxb">
             <br>
-            <h1>Records</h1>
+            <h1>Medical Records</h1>
             <br>
-            <p> Records
+            <p>Here, you can see your medical information provided by your doctor
             </p>
-            <br>
-            <br><br><br><br><br>
-            
+            <!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surgical History</th>
+                        <th>Obstetric History</th>
+                        <th>Medications</th>
+                        <th>Allergies</th>
+                        <th>Family History</th>
+                        <th>Social History</th>
+                        <th>Habits</th>
+                        <th>Immunization</th>
+                        <th>Developmental History</th>
+                        <th>Demographics</th>
+                        <th>Medical Encounters</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td>{{ record[0] }}</td>
+                        <td>{{ record[1] }}</td>
+                        <td>{{ record[2] }}</td>
+                        <td>{{ record[3] }}</td>
+                        <td>{{ record[4] }}</td>
+                        <td>{{ record[5] }}</td>
+                        <td>{{ record[6] }}</td>
+                        <td>{{ record[7] }}</td>
+                        <td>{{ record[8] }}</td>
+                        <td>{{ record[9] }}</td>
+                        <td>{{ record[10] }}</td>
+                        <td>{{ record[11] }}</td>
+                        <td>{{ record[12] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table> -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[0] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Surgical History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Obstetric History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Medications</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Allergies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Family History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[5] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Social History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Habits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[7] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Immunization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[8] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Developmental History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[9] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Demographics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[10] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Medical Encounters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[11] }}</td>
+                    </tr>
+                    {% endfor %}
+                        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tableheader">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td class="tablemain">{{ record[12] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </body>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Surgical History</th>
-                <th>Obstetric History</th>
-                <th>Medications</th>
-                <th>Allergies</th>
-                <th>Family History</th>
-                <th>Social History</th>
-                <th>Habits</th>
-                <th>Immunization</th>
-                <th>Developmental_history</th>
-                <th>Demographics</th>
-                <th>Medical Encounters</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for record in records %}
-            <tr>
-                <td>{{ record[0] }}</td>
-                <td>{{ record[1] }}</td>
-                <td>{{ record[2] }}</td>
-                <td>{{ record[3] }}</td>
-                <td>{{ record[4] }}</td>
-                <td>{{ record[5] }}</td>
-                <td>{{ record[6] }}</td>
-                <td>{{ record[7] }}</td>
-                <td>{{ record[8] }}</td>
-                <td>{{ record[9] }}</td>
-                <td>{{ record[10] }}</td>
-                <td>{{ record[11] }}</td>
-                <td>{{ record[12] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
 
 {% endblock %}
