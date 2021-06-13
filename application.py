@@ -156,8 +156,6 @@ def records():
     if not db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"]):
         return render_template("emptyRecords.html")
     rows = db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"])
-    print(session["user_id"])
-    print(rows)
     records = []
     for row in rows:
         records.append((row["name"], row["surgical_history"], row["obstetric_history"], row["medications"], row["allergies"], row["family_history"], row["social_history"], row["habits"], row["immunization"], row["developmental_history"], row["demographics"], row["medical_encounters"], row["notes"]))
