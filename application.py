@@ -156,11 +156,11 @@ def records():
     # if not db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"]):
     #     return render_template("emptyRecords.html")
     rows = db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"])
+    print(session["user_id"])
     print(rows)
     records = []
     for row in rows:
         records.append((row["name"], row["surgical_history"], row["obstetric_history"], row["medications"], row["allergies"], row["family_history"], row["social_history"], row["habits"], row["immunization"], row["developmental_history"], row["demographics"], row["medical_encounters"], row["notes"]))
-        #records.append((rows[0]["name"], rows[0]["surgical_history"], rows[0]["obstetric_history"], rows[0]["medications"], rows[0]["allergies"], rows[0]["family_history"], rows[0]["social_history"], rows[0]["habits"], rows[0]["immunization"], rows[0]["developmental_history"], rows[0]["demographics"], rows[0]["medical_encounters"], rows[0]["notes"]))
     return render_template("records.html", records = records)
 
 
