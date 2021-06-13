@@ -59,7 +59,7 @@ def admin_input():
         if not request.form.get("name") or not request.form.get("surgical_history") or not request.form.get("obstetric_history") or not request.form.get("medications") or not request.form.get("allergies") or not request.form.get("family_history") or not request.form.get("social_history") or not request.form.get("habits") or not request.form.get("immunization") or not request.form.get("developmental_history") or not request.form.get("demographics") or not request.form.get("medical_encounters") or not request.form.get("notes"):
             return apology("Didn't finish form", 400)
         db.execute("INSERT INTO records (person_id, name, surgical_history, obstetric_history, medications, allergies, family_history, social_history, habits, immunization, developmental_history, demographics, medical_encounters, notes) VALUES (:person_id, :name, :surgical_history, :obstetric_history, :medications, :allergies, :family_history, :social_history, :habits, :immunization, :developmental_history, :demographics, :medical_encounters, :notes)",
-                    person_id=session["user_id"],name=request.form.get("name"), surgical_history=request.form.get("surgical_history"), obstetric_history=request.form.get("obstetric_history"), medications=request.form.get("medications"), allergies=request.form.get("allergies"), family_history = request.form.get("family_history"), social_history=request.form.get("social_history"), habits=request.form.get("habits"), immunization=request.form.get("immunization"), developmental_history=request.form.get("developmental_history"), demographics=request.form.get("demographics"), medical_encounters=request.form.get("medical_encounters"), notes=request.form.get("notes"))
+                    person_id=db.execute("SELECT id from users where name = :name", name=str(request.form.get("name")))[0]["id"],name=request.form.get("name"), surgical_history=request.form.get("surgical_history"), obstetric_history=request.form.get("obstetric_history"), medications=request.form.get("medications"), allergies=request.form.get("allergies"), family_history = request.form.get("family_history"), social_history=request.form.get("social_history"), habits=request.form.get("habits"), immunization=request.form.get("immunization"), developmental_history=request.form.get("developmental_history"), demographics=request.form.get("demographics"), medical_encounters=request.form.get("medical_encounters"), notes=request.form.get("notes"))
         return redirect("/")
     else:
         return render_template("admin_input.html")
@@ -68,16 +68,6 @@ def admin_input():
 def locations():
     return render_template("locations.html")
 
-@app.route("/records", methods = ["GET"])
-@login_required
-def records():
-    if not db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"]):
-        return render_template("emptyRecords.html")
-    rows = db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"])
-    records = []
-    for row in rows:
-        records.append(list((row["name"], row["surgical_history"], row["obstetric_history"], row["medications"], row["allergies"], row["family_history"], row["social_history"], row["habits"], row["immunization"], row["developmental_history"], row["demographics"], row["medical_encounters"], row["notes"])))
-    return render_template("records.html", records = records)
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():
@@ -159,6 +149,20 @@ def logout():
     session.clear()
     # Redirect user to login form
     return redirect("/login")
+
+@app.route("/records", methods = ["GET", "POST"])
+@login_required
+def records():
+    # if not db.execute("SELECT * from records where person_id = :person_id", person_id = session["user_id"]):
+    #     return render_template("emptyRecords.html")
+    rows = db.execute("SELECT * FROM records WHERE person_id = :id", id=session["user_id"])
+    print(rows)
+    records = []
+    for row in rows:
+        records.append((row["name"], row["surgical_history"], row["obstetric_history"], row["medications"], row["allergies"], row["family_history"], row["social_history"], row["habits"], row["immunization"], row["developmental_history"], row["demographics"], row["medical_encounters"], row["notes"]))
+        #records.append((rows[0]["name"], rows[0]["surgical_history"], rows[0]["obstetric_history"], rows[0]["medications"], rows[0]["allergies"], rows[0]["family_history"], rows[0]["social_history"], rows[0]["habits"], rows[0]["immunization"], rows[0]["developmental_history"], rows[0]["demographics"], rows[0]["medical_encounters"], rows[0]["notes"]))
+    return render_template("records.html", records = records)
+
 
 def errorhandler(e):
     """Handle error"""
